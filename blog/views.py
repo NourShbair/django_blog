@@ -3,6 +3,6 @@ from django.views import generic
 from .models import Post
 # Create your views here.
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.all()
     print(queryset)
     template_name = "post_list.html"
